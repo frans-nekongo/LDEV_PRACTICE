@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
+//use Dotenv\Util\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use function Pest\Laravel\from;
+
 
 class Task extends Model
 {
@@ -16,11 +20,12 @@ class Task extends Model
      */
 
     protected $fillable = [
-        'id',
+//        'id',
         'title',
         'description',
         'status',
         'due_date',
-        'created_at',
+//        'created_at',
     ];
+
 }
