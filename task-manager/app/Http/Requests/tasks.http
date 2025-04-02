@@ -1,4 +1,4 @@
-GET http://127.0.0.1:8000/api/tasks/1
+GET http://127.0.0.1:8000/api/tasks/3
 Accept: application/json
 
 ###
@@ -10,19 +10,20 @@ POST http://localhost:8000/api/tasks
 Content-Type: application/json
 
 {
-    "title": "3rd  task test",
-    "description": "do this or you will not do it",
+    "title": "BeyBlades",
+    "description": "This should be a thing",
     "status": "in_progress"
 }
 
 
 ### Send PUT request with json body
-PUT http://localhost:8000/api/tasks/2
+PUT http://localhost:8000/api/tasks/3
 Content-Type: application/json
 
 {
-    "title": "first  task test change ",
-    "description": "No die"
+    "title": "fir",
+    "description": "No die",
+    "status": "in_progress"
 }
 
 ### DELETE request with a header
