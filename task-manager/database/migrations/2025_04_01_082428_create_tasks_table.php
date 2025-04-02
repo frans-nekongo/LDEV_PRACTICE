@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->increments('id');            $table->string('title'); // figure out how to make this required,cannot be null energy
+            $table->increments('id');
+            $table->string('title'); // figure out how to make this required,cannot be null energy
             $table->text('description');
             $table->enum('status', ['pending', 'in_progress', 'completed'])->default('pending');
             $table->date('due_date')->nullable(); //this ish should be optional is it the same as nullable

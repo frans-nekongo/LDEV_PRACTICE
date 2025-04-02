@@ -1,0 +1,31 @@
+GET http://127.0.0.1:8000/api/tasks/1
+Accept: application/json
+
+###
+GET http://localhost:8000/api/tasks
+Accept: application/json
+
+### Send POST request with json body
+POST http://localhost:8000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "3rd  task test",
+    "description": "do this or you will not do it",
+    "status": "in_progress"
+}
+
+
+### Send PUT request with json body
+PUT http://localhost:8000/api/tasks/2
+Content-Type: application/json
+
+{
+    "title": "first  task test change ",
+    "description": "No die"
+}
+
+### DELETE request with a header
+DELETE http://localhost:8000/api/tasks/3
+Accept: application/json
+

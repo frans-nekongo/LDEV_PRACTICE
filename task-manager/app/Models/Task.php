@@ -28,4 +28,8 @@ class Task extends Model
 //        'created_at',
     ];
 
+    public static function create(array $array)
+    {
+    }
+
 }
