@@ -12,9 +12,14 @@ Route::get('/user', function (Request $request) {
 
 //this command life saver install:api
 
+//figuring out api timout issue
+Route::get('/test-connection', function () {
+    return response()->json(['status' => 'ok']);
+});
+
 //shandies for Tasks
-Route::get('/tasks', [TaskController::class, 'index']);
-Route::post('/tasks', [TaskController::class, 'store']);
-Route::get('/tasks/{id}', [TaskController::class, 'show']);
-Route::put('/tasks/{id}', [TaskController::class, 'update']);
-Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
+Route::get('/tasks', [TaskController::class, 'index'])->name('api.tasks.index');
+Route::post('/tasks', [TaskController::class, 'store'])->name('api.tasks.store');
+Route::get('/tasks/{id}', [TaskController::class, 'show'])->name('api.tasks.show');
+Route::put('/tasks/{id}', [TaskController::class, 'update'])->name('api.tasks.update');
+Route::delete('/tasks/{id}', [TaskController::class, 'destroy'])->name('api.tasks.destroy');

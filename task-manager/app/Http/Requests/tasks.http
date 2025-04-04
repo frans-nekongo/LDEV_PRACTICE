@@ -1,11 +1,12 @@
+### Get SPECIFIC TASK
 GET http://127.0.0.1:8000/api/tasks/3
 Accept: application/json
 
-###
+### Get ALL TASKS
 GET http://localhost:8000/api/tasks
 Accept: application/json
 
-### Send POST request with json body
+### POST A TASK
 POST http://localhost:8000/api/tasks
 Content-Type: application/json
 
@@ -16,7 +17,7 @@ Content-Type: application/json
 }
 
 
-### Send PUT request with json body
+### UPDATE A TASK
 PUT http://localhost:8000/api/tasks/3
 Content-Type: application/json
 
@@ -26,7 +27,7 @@ Content-Type: application/json
     "status": "in_progress"
 }
 
-### DELETE request with a header
+### DELETE A TASK
 DELETE http://localhost:8000/api/tasks/3
 Accept: application/json
 

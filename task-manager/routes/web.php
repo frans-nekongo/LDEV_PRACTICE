@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+//Volt::route('/task', 'task')->name('task');
+//Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
+
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
